@@ -25,7 +25,11 @@ public class ResponseHeaderServlet extends HttpServlet {
 
         //[Header 편의 메서드]
 //        content(response);
-        cookie(response);
+        // 쿠키 셋팅
+//        cookie(response);
+        // 리다이렉트
+        redirect(response);
+
 
 
         PrintWriter writer = response.getWriter();
@@ -49,6 +53,11 @@ public class ResponseHeaderServlet extends HttpServlet {
         cookie.setMaxAge(600); //600초
         response.addCookie(cookie);
 
+    }
+
+    //리다이렉트
+    private void redirect(HttpServletResponse response) throws IOException {
+        response.sendRedirect("/basic/hello-form.html");
     }
 
 }
