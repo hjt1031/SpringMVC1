@@ -37,7 +37,9 @@ public class FrontControllerServletV1 extends HttpServlet {
             response.setStatus(HttpServletResponse.SC_NOT_FOUND);
             return;
         }
-
+        //자 뭐가 궁금한데ControllerV1 이걸로 굳이 왜받는지
         controller.process(request,response);
+        //위에꺼 실행 결과가 MyView가 return 되는거지
+
     }
 }
